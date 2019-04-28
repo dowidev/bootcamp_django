@@ -26,7 +26,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello_world),
     path('categories/', views.categories),
+    path('get_category/<int:pk>', views.get_category),
+    path('news/', views.news),
+    path('get_news/<int:pk>', views.get_news)
 ]
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
