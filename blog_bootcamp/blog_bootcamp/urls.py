@@ -24,6 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.hello_world),
     path('categories/', views.categories),
+    path('get_category/<int:pk>/', views.get_category),
+    path('news/', views.news),
+    path('get_news/<int:pk>/', views.get_news),
+
 ]
 
 
