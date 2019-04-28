@@ -18,12 +18,14 @@ from django.contrib import admin
 
 from django.urls import path
 
+from blog import views
 from blog.views import hello_world
 from blog_bootcamp import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', hello_world)
+    path('hello/', hello_world),
+    path('categories/', views.categories),
 ]
 
 if settings.DEBUG:
